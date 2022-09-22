@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import json from '../../db.json';
 import { Photo } from '../stylesheets/photo_container_styles';
 import styled from 'styled-components';
-import { animated, useTrail } from 'react-spring';
 
 interface JsonData {
   [key: string]: {
@@ -15,21 +14,6 @@ interface JsonData {
 
 const OnTheRoad = () => {
   const imgUrls: JsonData[] = json.photoGroups.road.map((url: any) => url);
-  const [active, setActive] = useState(false);
-
-  useEffect(() => {
-    setActive(true);
-  }, []);
-
-  const config = {
-    tension: 280,
-    friction: 60
-  };
-
-  const trails = useTrail(imgUrls.length, {
-    opacity: active ? 1 : 0,
-    config
-  });
 
   return (
     <>
@@ -48,21 +32,16 @@ const OnTheRoad = () => {
           </ProjectInfo>
         </ProjectInfoWrapper>
         <PhotoStackWrapper>
-          {trails.map((animation, i) => (
+          {imgUrls.map((image, i) => (
             <IndividualCard key={i}>
-              <Photo
-                src={`${imgUrls[i].imgUrl}`}
-                key={i}
-                className="onTheRoad"
-                style={animation}
-              />
-              <InfoCard style={animation}>
+              <Photo src={`${image.imgUrl}`} key={i} className="onTheRoad" />
+              <InfoCard>
                 <TitleAndLocation>
-                  {`${imgUrls[i].title}`} - {`${imgUrls[i].location}`}
+                  {`${image.title}`} - {`${image.location}`}
                 </TitleAndLocation>
                 <br />
                 <br />
-                {`${imgUrls[i].description}`}
+                {`${image.description}`}
               </InfoCard>
             </IndividualCard>
           ))}
@@ -114,7 +93,7 @@ const MainWrapper = styled.div`
   }
 `;
 
-const InfoCard = styled(animated.div)`
+const InfoCard = styled.div`
   padding: 1rem;
   margin-top: -3rem;
   margin-right: 20rem;
