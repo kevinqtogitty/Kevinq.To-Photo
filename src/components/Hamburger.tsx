@@ -2,7 +2,9 @@ import type React from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { useTransition, animated } from 'react-spring';
-import { Anchor, LI, UL } from '../stylesheets/navigation_styles';
+import { LI, UL } from '../stylesheets/navigation_styles';
+import { Link } from 'react-router-dom';
+import '../stylesheets/router.css';
 
 const Hamburger: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
@@ -22,15 +24,29 @@ const Hamburger: React.FC = () => {
 
   const subMenu: JSX.Element = (
     <UL className="projectsMenu">
-      <LI className="hamburgerSubLink">
-        <Anchor href="/growingUp">Growing Up Assala</Anchor>
-      </LI>
-      <LI className="hamburgerSubLink">
-        <Anchor href="/onTheRoad">OTRATEOTW</Anchor>
-      </LI>
-      <LI className="hamburgerSubLink">
-        <Anchor href="/below">Below</Anchor>
-      </LI>
+      <Link to={'/growingUp'} className="projectsLink">
+        <LI
+          className="hamburgerSubLink"
+          onClick={() => setIsActive((isActive) => !isActive)}
+        >
+          Growing Up Assala
+        </LI>
+      </Link>
+      <Link
+        to={'/onTheRoad'}
+        className="projectsLink"
+        onClick={() => setIsActive((isActive) => !isActive)}
+      >
+        <LI className="hamburgerSubLink">OTRATEOTW </LI>
+      </Link>
+      <Link to={'/below'} className="projectsLink">
+        <LI
+          className="hamburgerSubLink"
+          onClick={() => setIsActive((isActive) => !isActive)}
+        >
+          Below
+        </LI>
+      </Link>
     </UL>
   );
 
@@ -41,40 +57,72 @@ const Hamburger: React.FC = () => {
 
       <Menu id="menu">
         <UL className="mobileMenu">
-          <LI className="hamburgerLink">
-            <Anchor href="/">Home</Anchor>
-          </LI>
-          <LI className="hamburgerLink">
-            <Anchor href="/street">Street</Anchor>
-          </LI>
-          <LI className="hamburgerLink">
-            <Anchor href="/landscapes">Landscapes</Anchor>
-          </LI>
-          <LI className="hamburgerLink">
-            <Anchor
-              onClick={() =>
-                setSubMenuIsActive((subMenuIsActive) => !subMenuIsActive)
-              }
+          <Link to={'/'} className="projectsLink">
+            <LI
+              className="hamburgerLink"
+              onClick={() => setIsActive((isActive) => !isActive)}
             >
+              Home
+            </LI>
+          </Link>
+          <Link to={'/street'} className="projectsLink">
+            <LI
+              className="hamburgerLink"
+              onClick={() => setIsActive((isActive) => !isActive)}
+            >
+              Street{' '}
+            </LI>
+          </Link>
+          <Link to={'/landscapes'} className="projectsLink">
+            <LI
+              className="hamburgerLink"
+              onClick={() => setIsActive((isActive) => !isActive)}
+            >
+              Landscapes
+            </LI>
+          </Link>
+          <LI
+            onClick={() =>
+              setSubMenuIsActive((subMenuIsActive) => !subMenuIsActive)
+            }
+          >
+            <LI className="hamburgerLink">
               Projects
-            </Anchor>
-            <UL className="projectsMenu">
-              {subMenuTransitions(
-                (styles, item) =>
-                  item && <animated.div style={styles}>{subMenu}</animated.div>
-              )}
-            </UL>
+              <UL className="projectsMenu">
+                {subMenuTransitions(
+                  (styles, item) =>
+                    item && (
+                      <animated.div style={styles}>{subMenu}</animated.div>
+                    )
+                )}
+              </UL>
+            </LI>
           </LI>
           <div style={{ marginTop: '15.6rem', position: 'fixed' }}>
-            <LI className="hamburgerLink">
-              <Anchor>Store</Anchor>
-            </LI>
-            <LI className="hamburgerLink">
-              <Anchor href="/about">About</Anchor>
-            </LI>
-            <LI className="hamburgerLink">
-              <Anchor href="/contact">Contact</Anchor>
-            </LI>
+            <Link to={'/store'} className="projectsLink">
+              <LI
+                className="hamburgerLink"
+                onClick={() => setIsActive((isActive) => !isActive)}
+              >
+                Store
+              </LI>
+            </Link>
+            <Link to={'/about'} className="projectsLink">
+              <LI
+                className="hamburgerLink"
+                onClick={() => setIsActive((isActive) => !isActive)}
+              >
+                About
+              </LI>
+            </Link>
+            <Link to={'/contact'} className="projectsLink">
+              <LI
+                className="hamburgerLink"
+                onClick={() => setIsActive((isActive) => !isActive)}
+              >
+                Contact
+              </LI>
+            </Link>
           </div>
         </UL>
       </Menu>
