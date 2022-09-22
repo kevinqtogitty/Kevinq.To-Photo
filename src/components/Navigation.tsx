@@ -5,8 +5,9 @@ import { useTransition, animated, useSpring } from 'react-spring';
 import styled from 'styled-components';
 
 import { FlexWrapper, Header1 } from '../stylesheets/global_component_styles';
-import { Navigation, UL, LI, Anchor } from '../stylesheets/navigation_styles';
+import { Navigation, UL, LI } from '../stylesheets/navigation_styles';
 import Hamburger from './Hamburger';
+import '../stylesheets/router.css';
 
 const NavigationMenu = () => {
   const [subMenuIsActive, setSubMenuIsActive] = useState(false);
@@ -79,11 +80,6 @@ const NavigationMenu = () => {
     leave: { opacity: 0, transform: 'translateX(150%)' }
   });
 
-  const handleProjectsHover = () => {
-    console.log('hello');
-    setSubMenuIsActive((subMenuIsActive) => !subMenuIsActive);
-  };
-
   //--------------------------------Tooltip animations-------------------------------------\\
   const tooltipHover = useTransition(tooltipState, {
     from: { opacity: 0, transform: 'translateY(-100%)' },
@@ -93,41 +89,44 @@ const NavigationMenu = () => {
 
   const subMenu: JSX.Element = (
     <UL className="projectsMenuDesktop">
-      <Link to={'/growingUp'}>
-        <Anchor
-          className="projectsLink"
+      <Link
+        to={'/growingUp'}
+        className="subMenuLink"
+        onClick={() => setSubMenuIsActive((state) => !state)}
+      >
+        <AnimatedSubMenuLink
           onMouseEnter={() => handleSubMenuBounce('firstItem')}
           onMouseOut={() => handleSubMenuBounce('firstItem')}
           style={bounce1}
-          as={animated.a}
-          href="/growingUp"
         >
           Growing Up Assala
-        </Anchor>
+        </AnimatedSubMenuLink>
       </Link>
-      <Link to={'/onTheRoad'} style={{ textDecoration: 'none' }}>
-        <Anchor
-          className="projectsLink"
+      <Link
+        to={'/onTheRoad'}
+        className="subMenuLink"
+        onClick={() => setSubMenuIsActive((state) => !state)}
+      >
+        <AnimatedSubMenuLink
           onMouseEnter={() => handleSubMenuBounce('secondItem')}
           onMouseOut={() => handleSubMenuBounce('secondItem')}
           style={bounce2}
-          as={animated.a}
-          href="/onTheRoad"
         >
           OTRATEOTW
-        </Anchor>
+        </AnimatedSubMenuLink>
       </Link>
-      <Link to={'below'}>
-        <Anchor
-          className="projectsLink"
+      <Link
+        to={'below'}
+        className="subMenuLink"
+        onClick={() => setSubMenuIsActive((state) => !state)}
+      >
+        <AnimatedSubMenuLink
           onMouseEnter={() => handleSubMenuBounce('thirdItem')}
           onMouseOut={() => handleSubMenuBounce('thirdItem')}
           style={bounce3}
-          as={animated.a}
-          href="/below"
         >
           Below
-        </Anchor>
+        </AnimatedSubMenuLink>
       </Link>
     </UL>
   );
@@ -151,46 +150,33 @@ const NavigationMenu = () => {
         </StickyHeader>
         <Navigation className="desktopAndTabletNavigation">
           <UL className="desktopMenu">
-            <Link to={'/'}>
-              <Anchor className="mainMenuItem" href="/">
-                Home
-              </Anchor>
+            <Link to={'/'} className="mainMenuItem">
+              Home
             </Link>
-            <Link to={'/street'}>
-              <Anchor className="mainMenuItem" href="/street/">
-                Street
-              </Anchor>
+            <Link to={'/street'} className="mainMenuItem">
+              <LI>Street</LI>
             </Link>
-            <Link to={'/landscapes'}>
-              <Anchor className="mainMenuItem" href="/landscapes/">
-                Landscapes
-              </Anchor>
+            <Link to={'/landscapes'} className="mainMenuItem">
+              <LI>Landscapes</LI>
             </Link>
-            <LI className="projects">
-              <Anchor
-                className="mainMenuItem"
-                onClick={() => setSubMenuIsActive((state) => !state)}
-              >
-                Projects
-              </Anchor>
+            <LI
+              className="projects, mainMenuItem"
+              onClick={() => setSubMenuIsActive((state) => !state)}
+            >
+              Projects
             </LI>
             <br />
             <br />
             <br />
-            {/* <LI>
-              <Anchor className="mainMenuItem">Store</Anchor>
-            </LI> */}
-            <Link to={'/about'}>
-              <Anchor className="mainMenuItem" href="/about">
-                About
-              </Anchor>
+            <Link to={'/store'} className="mainMenuItem">
+              Store
             </Link>
-            <Link to={'/contact'}>
-              <Anchor className="mainMenuItem" href="/contact">
-                Contact
-              </Anchor>
+            <Link to={'/about'} className="mainMenuItem">
+              About
             </Link>
-
+            <Link to={'/contact'} className="mainMenuItem">
+              Contact
+            </Link>
             {subMenuTransitions(
               (styles, item) =>
                 item && <animated.div style={styles}>{subMenu}</animated.div>
@@ -258,4 +244,9 @@ const StickyHeader = styled.div`
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 4px -2px rgba(228, 228, 208, 0.6);
   }
+`;
+
+const AnimatedSubMenuLink = styled(animated.li)`
+  list-style: none;
+  text-decoration: none;
 `;
