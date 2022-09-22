@@ -1,26 +1,11 @@
 import type React from 'react';
 import json from '../../db.json';
 import { ImageContainer, Photo } from '../stylesheets/photo_container_styles';
-import { useTrail } from 'react-spring';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const Below = () => {
-  const [active, setActive] = useState(false);
-  const imgUrls: string[] = json.photoGroups.below.map((item) => item.imgUrl);
-  const config = {
-    tension: 280,
-    friction: 60
-  };
-
-  useEffect(() => {
-    setActive(true);
-  }, []);
-
-  const trails = useTrail(imgUrls.length, {
-    opacity: active ? 1 : 0,
-    config
-  });
+  const data: string[] = json.photoGroups.below.map((item) => item.imgUrl);
 
   return (
     <MainWrapper>
@@ -40,13 +25,8 @@ const Below = () => {
         </p>
       </ProjectInfo>
       <ImageContainer className="below">
-        {trails.map((animation, i) => (
-          <Photo
-            className="belowImage"
-            src={imgUrls[i]}
-            key={i}
-            style={animation}
-          />
+        {data.map((url, i) => (
+          <Photo className="belowImage" src={url} key={i} />
         ))}
       </ImageContainer>
     </MainWrapper>
@@ -86,7 +66,7 @@ const ProjectInfo = styled.div`
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
       rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     margin-top: 7.3rem;
-    margin-bottom: -2rem;
+    margin-bottom: -6rem;
     margin-right: 0;
     width: 80vw;
   }
