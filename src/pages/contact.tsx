@@ -10,17 +10,18 @@ import {
 
 const Contact = () => {
   const email = import.meta.env.EMAIL;
-  console.log(email);
   return (
     <MainWrapper>
       <FormContainer className="formContainer">
         <ContactForm action={`https://formsubmit.co/${email}`} method="POST">
-          <h3>Get in touch!</h3>
+          <h1>Get in touch!</h1>
 
           <label htmlFor="name">Name: </label>
+          <br />
           <Input type="text" name="name" placeholder="Your name" required />
 
           <label htmlFor="email">Email: </label>
+          <br />
           <Input
             type="email"
             name="email"
@@ -29,6 +30,8 @@ const Contact = () => {
           />
 
           <label htmlFor="message">Message: </label>
+          <br />
+
           <TextArea name="message" placeholder="Yo Kev!" />
           <input type="hidden" name="_subject" value="New submission!" />
           <input type="hidden" name="_template" value="table" />
