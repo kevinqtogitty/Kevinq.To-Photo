@@ -64,7 +64,7 @@ const ProjectInfo = styled.div`
   margin-top: 2rem;
   padding: 1rem;
   background-color: rgba(228, 228, 208, 0.7);
-  max-width: 60rem;
+  width: 60rem;
   height: fit-content;
   border: none;
   border-radius: 5px;
