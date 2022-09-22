@@ -8,6 +8,7 @@ import Contact from './pages/contact';
 import GrowingUpAssala from './pages/growingUp';
 import Landscapes from './pages/landscapes';
 import OnTheRoad from './pages/onTheRoad';
+import Store from './pages/store';
 import Street from './pages/street';
 import './stylesheets/globalStyle.css';
 
@@ -23,7 +24,7 @@ function App() {
           <Route path="/growingUp" element={<GrowingUpAssala />} />
           <Route path="/onTheRoad" element={<OnTheRoad />} />
           <Route path="/below" element={<Below />} />
-          {/* <Route path="/store" element={} /> */}
+          <Route path="/store" element={<Store />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
