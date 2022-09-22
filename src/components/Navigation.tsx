@@ -141,10 +141,9 @@ const NavigationMenu = () => {
         position="fixed"
       >
         <StickyHeader>
-          <Header1 fontSize="3rem">
-            Kevin To
-            <br />
-            Photography
+          <Header1 fontSize="2.6rem">
+            | Kevin To
+            <br /> | Photography
           </Header1>
           <Hamburger />
         </StickyHeader>
