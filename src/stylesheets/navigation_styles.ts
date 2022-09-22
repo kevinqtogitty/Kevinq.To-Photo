@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 const Navigation = styled.nav`
   @media (max-width: 500px) {
@@ -20,6 +21,9 @@ const LI = styled.li`
   }
   &.tooltip {
     cursor: default;
+  }
+  &.hamburgerLink {
+    font-size: 2rem;
   }
 `;
 
@@ -57,21 +61,4 @@ const UL = styled.ul`
   }
 `;
 
-const Anchor = styled.a`
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  &Anchor:visited,
-  &Anchor:link {
-    text-decoration: none;
-    color: black;
-  }
-  &.mainMenuItem {
-    transition: 400ms ease-in-out;
-  }
-  &.mainMenuItem:hover {
-    translate: 10px;
-  }
-`;
-
-export { Navigation, LI, UL, Anchor };
+export { Navigation, LI, UL };
