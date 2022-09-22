@@ -247,6 +247,7 @@ const StickyHeader = styled.div`
 `;
 
 const AnimatedSubMenuLink = styled(animated.li)`
+  width: fit-content;
   list-style: none;
   text-decoration: none;
 `;

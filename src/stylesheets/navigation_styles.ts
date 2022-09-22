@@ -47,11 +47,10 @@ const UL = styled.ul`
   }
   &.projectsMenuDesktop {
     width: 12rem;
-    padding: 0.8rem;
+    padding: 0.6rem;
     position: fixed;
     top: -12rem;
     background-color: rgb(228, 228, 208);
-    padding: 5px;
     border-radius: 6px;
     box-shadow: 5px 5px 5px grey;
     row-gap: 0.2rem;
