@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const MainWrapper = styled.div`
-  margin-left: 21rem;
+  margin-left: 16.4rem;
   height: 100vh;
-  width: calc(100vw - 21rem);
+  width: calc(100vw - 16rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,17 +39,19 @@ const ContactForm = styled.form`
 
 const Input = styled.input`
   margin-bottom: 1.2rem;
-  height: 1.5rem;
-  max-width: 15rem;
+  height: 2rem;
+  width: calc(100% - 30%);
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 0.7rem;
+  font-size: 1rem;
 `;
 
 const TextArea = styled.textarea`
   border-radius: 4px;
   width: 30rem;
   height: 10rem;
-  padding: 0.5rem;
+  padding: 0.7rem;
+  font-size: 1rem;
   @media (max-width: 500px) {
     width: auto;
     height: 10rem;
@@ -57,8 +59,9 @@ const TextArea = styled.textarea`
 `;
 
 const FormSubmissionButton = styled.button`
-  width: 5rem;
-  height: 2.6rem;
+  font-size: 1.1rem;
+  width: 6rem;
+  height: 3rem;
   display: flex;
   margin-top: 1rem;
   justify-content: center;
@@ -67,6 +70,8 @@ const FormSubmissionButton = styled.button`
   color: whitesmoke;
   border-radius: 10px;
   cursor: pointer;
+  border: whitesmoke;
+  box-shadow: 2px 2px 2px grey;
 `;
 
 export {
