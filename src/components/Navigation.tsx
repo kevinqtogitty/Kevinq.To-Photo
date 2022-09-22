@@ -20,8 +20,6 @@ const NavigationMenu = () => {
     setCopied(true);
   };
 
-  //--------------------------------Main menu animations-------------------------------------\\
-
   //--------------------------------Submenu animations-------------------------------------\\
 
   const [bounce1, setBounce1] = useSpring(() => ({
@@ -95,7 +93,7 @@ const NavigationMenu = () => {
 
   const subMenu: JSX.Element = (
     <UL className="projectsMenuDesktop">
-      <LI>
+      <Link to={'/growingUp'}>
         <Anchor
           className="projectsLink"
           onMouseEnter={() => handleSubMenuBounce('firstItem')}
@@ -106,8 +104,8 @@ const NavigationMenu = () => {
         >
           Growing Up Assala
         </Anchor>
-      </LI>
-      <LI style={{ textDecoration: 'none' }}>
+      </Link>
+      <Link to={'/onTheRoad'} style={{ textDecoration: 'none' }}>
         <Anchor
           className="projectsLink"
           onMouseEnter={() => handleSubMenuBounce('secondItem')}
@@ -118,8 +116,8 @@ const NavigationMenu = () => {
         >
           OTRATEOTW
         </Anchor>
-      </LI>
-      <LI>
+      </Link>
+      <Link to={'below'}>
         <Anchor
           className="projectsLink"
           onMouseEnter={() => handleSubMenuBounce('thirdItem')}
@@ -130,7 +128,7 @@ const NavigationMenu = () => {
         >
           Below
         </Anchor>
-      </LI>
+      </Link>
     </UL>
   );
 
@@ -153,21 +151,21 @@ const NavigationMenu = () => {
         </StickyHeader>
         <Navigation className="desktopAndTabletNavigation">
           <UL className="desktopMenu">
-            <LI>
+            <Link to={'/'}>
               <Anchor className="mainMenuItem" href="/">
                 Home
               </Anchor>
-            </LI>
-            <LI>
+            </Link>
+            <Link to={'/street'}>
               <Anchor className="mainMenuItem" href="/street/">
                 Street
               </Anchor>
-            </LI>
-            <LI>
+            </Link>
+            <Link to={'/landscapes'}>
               <Anchor className="mainMenuItem" href="/landscapes/">
                 Landscapes
               </Anchor>
-            </LI>
+            </Link>
             <LI className="projects">
               <Anchor
                 className="mainMenuItem"
@@ -179,19 +177,19 @@ const NavigationMenu = () => {
             <br />
             <br />
             <br />
-            <LI>
+            {/* <LI>
               <Anchor className="mainMenuItem">Store</Anchor>
-            </LI>
-            <LI>
+            </LI> */}
+            <Link to={'/about'}>
               <Anchor className="mainMenuItem" href="/about">
                 About
               </Anchor>
-            </LI>
-            <LI>
+            </Link>
+            <Link to={'/contact'}>
               <Anchor className="mainMenuItem" href="/contact">
                 Contact
               </Anchor>
-            </LI>
+            </Link>
 
             {subMenuTransitions(
               (styles, item) =>

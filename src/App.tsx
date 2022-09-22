@@ -14,8 +14,8 @@ import './stylesheets/globalStyle.css';
 function App() {
   return (
     <>
-      <NavigationMenu />
       <BrowserRouter>
+        <NavigationMenu />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/street" element={<Street />} />
