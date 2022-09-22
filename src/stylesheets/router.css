@@ -1,0 +1,21 @@
+.mainMenuItem {
+  transition: 400ms ease-in-out;
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  font-size: 1.4rem;
+}
+.mainMenuItem:hover {
+  translate: 10px;
+}
+
+.projectsLink,
+.projectsLink:hover,
+.projectsLink:visited {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+.subMenuLink {
+  text-decoration: none;
+}
