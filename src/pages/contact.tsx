@@ -9,7 +9,7 @@ import {
 } from '../stylesheets/form_styles';
 
 const Contact = () => {
-  const email = import.meta.env.EMAIL;
+  const email = import.meta.env.VITE_EMAIL;
   return (
     <MainWrapper>
       <FormContainer className="formContainer">
