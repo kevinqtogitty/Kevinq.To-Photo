@@ -8,7 +8,7 @@ const CartWrapper = styled(animated.div)`
   align-items: flex-end;
   position: fixed;
   background-color: rgba(255, 255, 255, 1);
-  top: calc(50% - 10rem);
+  top: calc(50% - 20rem);
   left: calc(50% - 15rem);
   padding: 1rem;
   height: fit-content;
@@ -107,6 +107,25 @@ const CloseModal = styled(RemoveItemFromCartIcon)`
   margin-bottom: -2rem;
 `;
 
+const CartNotification = styled(animated.div)`
+  width: 25rem;
+  color: white;
+  padding: 1rem;
+  background-color: rgba(4, 147, 114, 1);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 10rem;
+  left: calc(50% - 10rem);
+  @media (max-width: 500px) {
+    width: 15rem;
+    left: calc(50% - 8rem);
+    text-align: center;
+  }
+`;
+
 export {
   CloseModal,
   RemoveItemFromCartIcon,
@@ -119,5 +138,6 @@ export {
   ButtonWrapper,
   EmptyCartCard,
   CartWrapper,
-  CartCard
+  CartCard,
+  CartNotification
 };
