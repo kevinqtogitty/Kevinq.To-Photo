@@ -69,13 +69,12 @@ interface Header1Props {
   fontSize?: string;
 }
 const Header1 = styled.h1<Header1Props>`
-  margin-left: 1rem;
   padding: ${(props) => props.padding || '0rem 0rem 0rem 0rem'};
   font-size: ${(props) => props.fontSize || '1rem'};
   @media (max-width: 500px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0rem;
-    padding: 1rem;
+    border: 2px solid green;
   }
 `;
 
