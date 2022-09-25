@@ -12,7 +12,7 @@ import Landscapes from './pages/landscapes';
 import OnTheRoad from './pages/onTheRoad';
 import Store from './pages/store';
 import Street from './pages/street';
-import './stylesheets/globalStyle.css';
+import './stylesheets/plain_stylesheets/globalStyle.css';
 
 function App() {
   return (
