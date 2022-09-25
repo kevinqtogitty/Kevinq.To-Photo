@@ -9,7 +9,7 @@ import {
   Tooltip,
   Navigation
 } from '../stylesheets/styled_components/component_styles/navigationStyles';
-import '../stylesheets/router.css';
+import '../stylesheets/plain_stylesheets/router.css';
 import HeaderAndShoppingCart from './HeaderAndShoppingCart';
 
 const NavigationMenu: React.FC = () => {
