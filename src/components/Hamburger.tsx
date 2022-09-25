@@ -148,7 +148,6 @@ const MenuToggleButton = styled.button`
   display: none;
   @media (max-width: 500px) {
     position: relative;
-    /* z-index: 5; */
     border: none;
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;

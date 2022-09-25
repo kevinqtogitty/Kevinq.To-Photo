@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Header1 } from '../stylesheets/global_component_styles';
 import Hamburger from './Hamburger';
 import SlidingShoppingCart from './ShoppingCartSlidingMenu';
 import { useAppSelector } from '../redux_store/store';
