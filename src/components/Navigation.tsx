@@ -6,8 +6,8 @@ import styled from 'styled-components';
 
 import { FlexWrapper, Header1 } from '../stylesheets/global_component_styles';
 import { Navigation, UL, LI } from '../stylesheets/navigation_styles';
-import Hamburger from './Hamburger';
 import '../stylesheets/router.css';
+import HeaderAndShoppingCart from './HeaderAndShoppingCart';
 
 const NavigationMenu = () => {
   const [subMenuIsActive, setSubMenuIsActive] = useState(false);
@@ -140,13 +140,7 @@ const NavigationMenu = () => {
         justify="flex-start"
         position="fixed"
       >
-        <StickyHeader>
-          <Header1 fontSize="2.6rem">
-            | Kevin To
-            <br /> | Photography
-          </Header1>
-          <Hamburger />
-        </StickyHeader>
+        <HeaderAndShoppingCart />
         <Navigation className="desktopAndTabletNavigation">
           <UL className="desktopMenu">
             <Link to={'/'} className="mainMenuItem">
@@ -217,8 +211,6 @@ const NavigationMenu = () => {
 
 export default NavigationMenu;
 
-// const Navi;
-
 const Tooltip = styled(animated.li)`
   margin-top: 1rem;
   margin-left: 4.5rem;
@@ -230,19 +222,6 @@ const Tooltip = styled(animated.li)`
   padding: 5px;
   box-shadow: 5px 5px 5px grey;
   border-radius: 6px;
-`;
-
-const StickyHeader = styled.div`
-  @media (max-width: 500px) {
-    padding: 0;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(228, 228, 208, 0.6);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 4px -2px rgba(228, 228, 208, 0.6);
-  }
 `;
 
 const AnimatedSubMenuLink = styled(animated.li)`
