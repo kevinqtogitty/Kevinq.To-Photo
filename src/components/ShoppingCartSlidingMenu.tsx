@@ -24,10 +24,6 @@ const SlidingShoppingCart: React.FC<SlidingShoppingCartProps> = ({
 }) => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    () => setCartIsActive(false);
-  }, []);
-
   //--------------------------------Menu active or not animation-----------------------------------\\
 
   const ShoppingCartTransition = useTransition(cartIsActive, {

@@ -55,7 +55,6 @@ export default CheckoutForm;
 
 const Store = styled.div`
   padding: 23rem 10rem 0rem 10rem;
-  border: 2px solid red;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
