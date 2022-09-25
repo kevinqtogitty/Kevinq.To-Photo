@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useTransition } from 'react-spring';
 import {
@@ -68,21 +68,21 @@ const SlidingShoppingCart: React.FC<SlidingShoppingCartProps> = ({
     lineItems: [craterPrintStripe, flatironsPrintStripe],
     mode: 'payment',
     successUrl: `${window.location.origin}/success`,
-    cancelUrl: `${window.location.origin}`
+    cancelUrl: `kevinqtophoto.com`
   };
 
   const checkoutOptionOnlyCrater = {
     lineItems: [craterPrintStripe],
     mode: 'payment',
     successUrl: `${window.location.origin}/success`,
-    cancelUrl: `${window.location.origin}`
+    cancelUrl: `kevinqtophoto.com`
   };
 
   const checkoutOptionOnlyFlatirons = {
     lineItems: [flatironsPrintStripe],
     mode: 'payment',
     successUrl: `${window.location.origin}/success`,
-    cancelUrl: `${window.location.origin}`
+    cancelUrl: `kevinqtophoto.com`
   };
 
   const redirectToCheckout = async () => {
