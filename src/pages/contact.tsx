@@ -6,7 +6,7 @@ import {
   FormContainer,
   TextArea,
   FormSubmissionButton
-} from '../stylesheets/form_styles';
+} from '../stylesheets/styled_components/component_styles/formStyles';
 
 const Contact = () => {
   const email = import.meta.env.VITE_EMAIL;

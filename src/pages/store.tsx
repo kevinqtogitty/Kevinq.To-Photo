@@ -1,11 +1,11 @@
 import React from 'react';
-import { MainWrapper } from '../stylesheets/form_styles';
-import AvailableProducts from '../components/AvailableProducts';
+import { MainWrapper } from '../stylesheets/styled_components/component_styles/formStyles';
+import PrintStore from '../components/PrintStore';
 
 const Store = () => {
   return (
     <MainWrapper>
-      <AvailableProducts />
+      <PrintStore />
     </MainWrapper>
   );
 };

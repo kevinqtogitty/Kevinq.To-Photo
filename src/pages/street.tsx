@@ -1,6 +1,9 @@
 import type React from 'react';
 import json from '../../db.json';
-import { ImageContainer, Photo } from '../stylesheets/photo_container_styles';
+import {
+  ImageContainer,
+  Photo
+} from '../stylesheets/styled_components/component_styles/photoStyles';
 
 const Street = () => {
   const data: string[] = json.photoGroups.street.map((item) => item.imgUrl);

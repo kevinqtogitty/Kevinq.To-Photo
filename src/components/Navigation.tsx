@@ -2,10 +2,13 @@ import type React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTransition, animated, useSpring } from 'react-spring';
-import styled from 'styled-components';
 
-import { FlexWrapper, Header1 } from '../stylesheets/global_component_styles';
-import { Navigation, UL, LI } from '../stylesheets/navigation_styles';
+import { FlexWrapper, LI, UL } from '../stylesheets/globalReUsedComponents';
+import {
+  AnimatedSubMenuLink,
+  Tooltip,
+  Navigation
+} from '../stylesheets/styled_components/component_styles/navigationStyles';
 import '../stylesheets/router.css';
 import HeaderAndShoppingCart from './HeaderAndShoppingCart';
 
@@ -210,22 +213,3 @@ const NavigationMenu = () => {
 };
 
 export default NavigationMenu;
-
-const Tooltip = styled(animated.li)`
-  margin-top: 1rem;
-  margin-left: 4.5rem;
-  list-style: none;
-  cursor: default;
-  width: fit-content;
-  padding: 5px;
-  background-color: rgb(228, 228, 208);
-  padding: 5px;
-  box-shadow: 5px 5px 5px grey;
-  border-radius: 6px;
-`;
-
-const AnimatedSubMenuLink = styled(animated.li)`
-  width: fit-content;
-  list-style: none;
-  text-decoration: none;
-`;
