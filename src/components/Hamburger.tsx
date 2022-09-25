@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useTransition, animated } from 'react-spring';
 import { LI, UL } from '../stylesheets/globalReUsedComponents';
 import { Link } from 'react-router-dom';
-import '../stylesheets/router.css';
+import '../stylesheets/plain_stylesheets/router.css';
 import {
   MenuMask,
   Menu,
