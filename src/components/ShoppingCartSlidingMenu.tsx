@@ -68,21 +68,21 @@ const SlidingShoppingCart: React.FC<SlidingShoppingCartProps> = ({
     lineItems: [craterPrintStripe, flatironsPrintStripe],
     mode: 'payment',
     successUrl: `${window.location.origin}/success`,
-    cancelUrl: `${window.location.origin}/store`
+    cancelUrl: `kevinqtophoto.com/store`
   };
 
   const checkoutOptionOnlyCrater = {
     lineItems: [craterPrintStripe],
     mode: 'payment',
     successUrl: `${window.location.origin}/success`,
-    cancelUrl: `${window.location.origin}/store`
+    cancelUrl: `kevinqtophoto.com/store`
   };
 
   const checkoutOptionOnlyFlatirons = {
     lineItems: [flatironsPrintStripe],
     mode: 'payment',
     successUrl: `${window.location.origin}/success`,
-    cancelUrl: `${window.location.origin}/store`
+    cancelUrl: `kevinqtophoto.com/store`
   };
 
   const redirectToCheckout = async () => {
