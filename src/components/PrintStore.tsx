@@ -13,7 +13,7 @@ import {
   Store
 } from '../stylesheets/styled_components/page_styles/printStoreStyles';
 
-const PrintStore = () => {
+const PrintStore: React.FC = () => {
   const dispatch = useDispatch();
 
   return (

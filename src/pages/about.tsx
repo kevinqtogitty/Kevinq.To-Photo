@@ -6,7 +6,7 @@ import {
   MainWrapper
 } from '../stylesheets/styled_components/page_styles/aboutPageStyles';
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
   const animation = useSpring({
     loop: false,
     from: { opacity: 0, transform: 'translateY(-100%)' },

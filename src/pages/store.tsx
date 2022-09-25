@@ -2,7 +2,7 @@ import React from 'react';
 import { MainWrapper } from '../stylesheets/styled_components/component_styles/formStyles';
 import PrintStore from '../components/PrintStore';
 
-const Store = () => {
+const Store: React.FC = () => {
   return (
     <MainWrapper>
       <PrintStore />

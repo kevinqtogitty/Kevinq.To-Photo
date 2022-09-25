@@ -5,7 +5,7 @@ import {
   Photo
 } from '../stylesheets/styled_components/component_styles/photoStyles';
 
-const Street = () => {
+const Street: React.FC = () => {
   const data: string[] = json.photoGroups.street.map((item) => item.imgUrl);
 
   return (

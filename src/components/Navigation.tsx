@@ -12,7 +12,7 @@ import {
 import '../stylesheets/router.css';
 import HeaderAndShoppingCart from './HeaderAndShoppingCart';
 
-const NavigationMenu = () => {
+const NavigationMenu: React.FC = () => {
   const [subMenuIsActive, setSubMenuIsActive] = useState(false);
   const [copied, setCopied] = useState(false);
   const [tooltipState, setTooltipState] = useState(false);

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import Hamburger from './Hamburger';
 import SlidingShoppingCart from './ShoppingCartSlidingMenu';
 import { useAppSelector } from '../redux_store/store';
@@ -12,7 +11,7 @@ import {
   CartAmount
 } from '../stylesheets/styled_components/component_styles/headerAndShoppingCartStyles';
 
-const HeaderAndShoppingCart = () => {
+const HeaderAndShoppingCart: React.FC = () => {
   const { craterPrint, flatironsPrint } = useAppSelector(
     (state) => state.productsForSale
   );

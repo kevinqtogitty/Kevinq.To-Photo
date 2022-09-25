@@ -8,7 +8,7 @@ import {
   FormSubmissionButton
 } from '../stylesheets/styled_components/component_styles/formStyles';
 
-const Contact = () => {
+const Contact: React.FC = () => {
   const email = import.meta.env.VITE_EMAIL;
   return (
     <MainWrapper>

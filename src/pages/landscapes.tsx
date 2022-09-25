@@ -5,7 +5,7 @@ import {
   Photo
 } from '../stylesheets/styled_components/component_styles/photoStyles';
 
-const Landscapes = () => {
+const Landscapes: React.FC = () => {
   const data = json.photoGroups.landscapes.map((item) => item.imgUrl);
 
   return (

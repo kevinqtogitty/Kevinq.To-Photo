@@ -9,7 +9,7 @@ import {
   ProjectInfo
 } from '../stylesheets/styled_components/page_styles/growingUpAssalaStyles';
 
-const GrowingUpAssala = () => {
+const GrowingUpAssala: React.FC = () => {
   const data: string[] = json.photoGroups.growingUpAssala.map(
     (item) => item.imgUrl
   );

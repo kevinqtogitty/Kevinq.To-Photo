@@ -20,7 +20,7 @@ interface JsonData {
   };
 }
 
-const OnTheRoad = () => {
+const OnTheRoad: React.FC = () => {
   const imgUrls: JsonData[] = json.photoGroups.road.map((url: any) => url);
 
   return (

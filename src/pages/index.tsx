@@ -5,7 +5,7 @@ import {
   Photo
 } from '../stylesheets/styled_components/component_styles/photoStyles';
 
-const Home = () => {
+const Home: React.FC = () => {
   const data = json.photoGroups.homepage.map((item) => item.imgUrl);
 
   return (

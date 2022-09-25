@@ -9,7 +9,7 @@ import {
   ProjectInfo
 } from '../stylesheets/styled_components/page_styles/belowPageStyles';
 
-const Below = () => {
+const Below: React.FC = () => {
   const data: string[] = json.photoGroups.below.map((item) => item.imgUrl);
 
   return (
