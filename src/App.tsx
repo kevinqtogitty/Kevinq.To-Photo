@@ -1,5 +1,6 @@
-import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import '@stripe/stripe-js';
+
 import NavigationMenu from './components/Navigation';
 import Home from './pages';
 import AboutMe from './pages/about';
