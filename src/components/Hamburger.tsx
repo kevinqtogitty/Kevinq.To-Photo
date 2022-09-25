@@ -156,7 +156,7 @@ const MenuToggleButton = styled.button`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 1.2rem;
+    margin-left: -2rem;
   }
 `;
 
