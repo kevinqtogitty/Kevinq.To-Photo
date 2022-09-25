@@ -6,7 +6,7 @@ import Home from './pages';
 import AboutMe from './pages/about';
 import Below from './pages/below';
 import Contact from './pages/contact';
-import GrowingUpAssala from './pages/growingUp';
+import GrowingUpAssala from './pages/growingUpAssala';
 import Landscapes from './pages/landscapes';
 import OnTheRoad from './pages/onTheRoad';
 import Store from './pages/store';
