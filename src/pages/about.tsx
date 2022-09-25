@@ -70,6 +70,7 @@ const AboutInfo = styled(animated.div)`
   height: fit-content;
   border: none;
   border-radius: 5px;
+  z-index: -1;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   @media (max-width: 500px) {
