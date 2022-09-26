@@ -16,22 +16,20 @@ import './stylesheets/plain_stylesheets/globalStyle.css';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <NavigationMenu />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/street" element={<Street />} />
-          <Route path="/landscapes" element={<Landscapes />} />
-          <Route path="/growingUp" element={<GrowingUpAssala />} />
-          <Route path="/onTheRoad" element={<OnTheRoad />} />
-          <Route path="/below" element={<Below />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/about" element={<AboutMe />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <NavigationMenu />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/street" element={<Street />} />
+        <Route path="/landscapes" element={<Landscapes />} />
+        <Route path="/growingUp" element={<GrowingUpAssala />} />
+        <Route path="/onTheRoad" element={<OnTheRoad />} />
+        <Route path="/below" element={<Below />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/about" element={<AboutMe />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
