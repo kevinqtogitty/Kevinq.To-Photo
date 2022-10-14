@@ -30,6 +30,7 @@ const MainWrapper = styled.div`
   width: calc(100vw - 18rem);
   margin-left: 16.4rem;
   position: absolute;
+  z-index: -1;
   @media (max-width: 500px) {
     justify-content: center;
     align-items: center;
@@ -85,7 +86,7 @@ const ProjectInfo = styled.div`
 `;
 
 const ProjectInfoWrapper = styled.div`
-  width: 100%;
+  width: fit-content;
   display: flex;
 `;
 
