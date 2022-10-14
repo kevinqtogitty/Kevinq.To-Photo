@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import json from '../../db.json';
 import { Photo } from '../stylesheets/styled_components/component_styles/photoStyles';
 import {
