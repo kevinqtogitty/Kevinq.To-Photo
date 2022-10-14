@@ -54,6 +54,7 @@ const Menu = styled.ul`
   /* to stop flickering of text in safari */
   @media (max-width: 500px) {
     display: block;
+    left: -28rem;
   }
 `;
 
