@@ -23,7 +23,9 @@ const AboutMe: React.FC = () => {
   return (
     <MainWrapper>
       <Photo
-        src={'/projects/random/0009437_0009437-R1-075-36-min.jpg'}
+        src={
+          'https://ulericks.sirv.com/Images/random/0009437_0009437-R1-075-36-min.jpg'
+        }
         style={photoAnimation}
         className="aboutPhoto"
       />
