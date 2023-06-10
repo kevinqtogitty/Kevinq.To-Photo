@@ -71,7 +71,7 @@ const PrintStore: React.FC = () => {
         <ProductCard>
           <Thumbnail
             className="crater"
-            src="src/assets/store_thumbnails/CraterThumb.jpg"
+            src="/store_thumbnails/CraterThumb.jpg"
             alt=""
           />
           <ProductDetails>
@@ -89,7 +89,7 @@ const PrintStore: React.FC = () => {
         <ProductCard>
           <Thumbnail
             className="flatirons"
-            src="src/assets/store_thumbnails/FlatironsThumb.jpg"
+            src="/store_thumbnails/FlatironsThumb.jpg"
             alt=""
           />
           <ProductDetails>
