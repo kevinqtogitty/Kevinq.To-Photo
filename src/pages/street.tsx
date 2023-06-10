@@ -1,5 +1,5 @@
 import type React from 'react';
-import json from '../../db.json';
+import json from '../../urlData.json';
 import {
   ImageContainer,
   Photo
